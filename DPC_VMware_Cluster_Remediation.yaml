@@ -1,0 +1,33 @@
+tosca_definitions_version: nativeedge_1_1
+description: The blueprint is used to execute cluster remediation, when managing VMware
+  vSphere.
+imports:
+- inputs/inputs.yaml
+- nodes/nodes.yaml
+- nativeedge/types/types.yaml
+- plugin:nativeedge-plugin
+- plugin:nativeedge-utilities-plugin
+- plugin:nativeedge-fabric-plugin
+labels:
+  csys-obj-type:
+    values:
+    - environment
+  target_environment:
+    values:
+    - ece
+  vendor:
+    values:
+    - DellPrivateCloud
+  solution:
+    values:
+    - DellPrivateCloud
+  version:
+    values:
+    - '0.1'
+blueprint_labels:
+  env:
+    values:
+    - CLUSTER_REMEDIATION
+  build_number:
+    values:
+    - '3'
